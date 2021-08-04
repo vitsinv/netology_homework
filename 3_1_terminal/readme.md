@@ -19,10 +19,11 @@
 
 <p><i>#Добавлена дата </i></p>
 
-</ul>
-<li>
-<p>С помощью базового файла конфигурации запустите Ubuntu 20.04 в VirtualBox посредством Vagrant:</p>
 
+## С помощью базового файла конфигурации запустите Ubuntu 20.04 в VirtualBox посредством Vagrant.</p>
+<i>Немножко усложнил задачу вывод vagrantfile:</i>
+
+```
 <code>
 #-*- mode: ruby -*-
 #vi: set ft=ruby :
@@ -81,7 +82,7 @@ Vagrant.configure(2) do |config|
 end
 end
 </code>
-
+```
 
 </li>
 </ul>
