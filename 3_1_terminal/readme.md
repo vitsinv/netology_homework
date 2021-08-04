@@ -1,42 +1,42 @@
 # Домашнее задание по 3.1 Работа в терминале
 
-##Установите средство виртуализации <a href="https://www.virtualbox.org/" rel="nofollow">Oracle VirtualBox</a>.</p>
+## Установите средство виртуализации <a href="https://www.virtualbox.org/" rel="nofollow">Oracle VirtualBox</a>.</p>
 <i>После общения с одним из преподавателей, было выяснено что вид средства виртуализации большого значения не имеет. В связи с этим я остался на уже установленном Hyper-V</i></p>
 
-##Установите средство автоматизации <a href="https://www.vagrantup.com/" rel="nofollow">Hashicorp Vagrant</a>.</p>
+## Установите средство автоматизации <a href="https://www.vagrantup.com/" rel="nofollow">Hashicorp Vagrant</a>.</p>
 <i>Выполнено</i></p>
 
-##В вашем основном окружении подготовьте удобный для дальнейшей работы терминал.</p>
+## В вашем основном окружении подготовьте удобный для дальнейшей работы терминал.</p>
 
 - Windows Terminal в Windows</li> <i> Используется</i>
 - выбрать цветовую схему, размер окна, шрифтов и т.д.</li> <i> В целом дефолтная вполне приятна</i>
-- почитать о кастомизации PS1/применить при желании.</li>
-<p>
-<code>echo $PS1</code>
-</p>
-<code>\t \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\</code>
+- почитать о кастомизации PS1/применить при желании.</li></p>
 
-<p><i> Добавлена дата </i></p>
+<code>echo $PS1
+</p>
+\t \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\
+</code>
+
+<p><i>#Добавлена дата </i></p>
 
 </ul>
 <li>
 <p>С помощью базового файла конфигурации запустите Ubuntu 20.04 в VirtualBox посредством Vagrant:</p>
-```
+
 <code>
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
+#-*- mode: ruby -*-
+#vi: set ft=ruby :
 
-# Создаем 2 виртуальные машины на базе разных боксов vagrant
+#Создаем 2 виртуальные машины на базе разных боксов vagrant
 
-# Общие свойства
+#Общие свойства
 #Domain
 DOMAIN="test"
 
-# Перечисляем ВМ
+#Перечисляем ВМ
 servers =[
 	{
 		:hostname => "centos." + DOMAIN,
-		#:ip => BRIDGE_NET + "65",
 		:ram => 1024,
 		:nodename => "centos/7",
 		:hdd_name => "centos_hdd.vhd",
@@ -44,7 +44,6 @@ servers =[
 	},
 	{
 		:hostname => "ubuntu." + DOMAIN,
-		#:ip => BRIDGE_NET + "66",
 		:ram => 1024,
 		:nodename => "bento/ubuntu-20.04",
 		:hdd_name => "ubuntu_hdd.vhd",
@@ -54,27 +53,27 @@ servers =[
 
 
 Vagrant.configure(2) do |config|
-	# Добавить общую шару
+	#Добавить общую шару
 	config.vm.synced_folder "c://users/vitsin/vagrant_files/exchange", "/src/exchange"
-	# При выполнении запросит логин\пароль пользователя с правами для папки на хосте
-	# Отключить дефолтную шару
+	#При выполнении запросит логин\пароль пользователя с правами для папки на хосте
+	#Отключить дефолтную шару
 	config.vm.synced_folder ".", "/vagrant", disabled: true
-	# Перечисляем servers
+	#Перечисляем servers
 	servers.each do |machine|
-		# Применяем конфигурации
-		# Имя сервера в диспетчере Hyper-V
+		#Применяем конфигурации
+		#Имя сервера в диспетчере Hyper-V
 		config.vm.define machine[:hostname] do |node|
-		# Получаем Vagrant Box
+		#Получаем Vagrant Box
 		node.vm.box = machine[:nodename]
 
-		# Настройки провайдера
+		#Настройки провайдера
 		node.vm.provider "hyperv" do |hv|
-			# Включаем Nifty
+			#Включаем Nifty
 			hv.enable_virtualization_extensions = true
 			hv.linked_clone = true
-			# RAM
+			#RAM
 			hv.maxmemory = machine[:ram]
-			# Присваиваем имя виртуалку
+			#Присваиваем имя виртуалке
 			hv.vmname = machine[:hostname]
 
 		end
@@ -82,7 +81,7 @@ Vagrant.configure(2) do |config|
 end
 end
 </code>
-```
+
 
 </li>
 </ul>
