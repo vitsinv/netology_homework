@@ -50,7 +50,8 @@
 <li>
 <p>Узнайте, какую наиболее старшую версию набора инструкций SSE поддерживает ваш процессор с помощью <code>/proc/cpuinfo</code>.</p>
 <p>4_2
-<p>'''cat /proc/cpuinfo | grep sse
+<p>
+```cat /proc/cpuinfo | grep sse
 flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq
 sse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves flush_l1d arch_capabilities
 flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq
@@ -58,7 +59,9 @@ sse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervis
 flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq
 sse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves flush_l1d arch_capabilities
 flags           : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid pni pclmulqdq
-sse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves flush_l1d arch_capabilities'''</p>
+sse3 fma cx16 pcid sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti ssbd ibrs ibpb stibp fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves flush_l1d arch_capabilities
+```
+</p>
 </li>
 <li>
 <p>При открытии нового окна терминала и <code>vagrant ssh</code> создается новая сессия и выделяется pty. Это можно подтвердить командой <code>tty</code>, которая упоминалась в лекции 3.2. Однако:</p>
@@ -73,7 +76,7 @@ not a tty</pre></div>
 <p>Бывает, что есть необходимость переместить запущенный процесс из одной сессии в другую. Попробуйте сделать это, воспользовавшись <code>reptyr</code>. Например, так можно перенести в <code>screen</code> процесс, который вы запустили по ошибке в обычной SSH-сессии.</p>
 </li>
 <p>
-'''vitsin$ ps -a
+```vitsin$ ps -a
   PID TTY          TIME CMD
    66 pts/2    00:00:00 ping
    75 pts/1    00:00:00 ps
@@ -81,7 +84,7 @@ not a tty</pre></div>
 64 bytes from ya.ru (87.250.250.242): icmp_seq=51 ttl=247 time=19.8 ms
 64 bytes from ya.ru (87.250.250.242): icmp_seq=52 ttl=247 time=17.1 ms
 64 bytes from ya.ru (87.250.250.242): icmp_seq=53 ttl=247 time=11.1 ms
-'''
+```
 </p>
 <li>
 <p><code>sudo echo string &gt; /root/new_file</code> не даст выполнить перенаправление под обычным пользователем, так как перенаправлением занимается процесс shell'а, который запущен без <code>sudo</code> под вашим пользователем. Для решения данной проблемы можно использовать конструкцию <code>echo string | sudo tee /root/new_file</code>. Узнайте что делает команда <code>tee</code> и почему в отличие от <code>sudo echo</code> команда с <code>sudo tee</code> будет работать.</p>
