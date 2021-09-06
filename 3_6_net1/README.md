@@ -40,7 +40,7 @@ HTTP/1.1 301 Moved Permanently
 <li>проверьте время загрузки страницы, какой запрос обрабатывался дольше всего?</li>
 <p> Request URL: https://stats.g.doubleclick.net/j/collect?t=dc&aip=1&_r=3&v=1&_v=j93&tid=UA-108242619-1&cid=843008760.1622102542&jid=1590431556&gjid=942896679&_gid=134024615.1630951327&_u=YCDACEAABAAAAC~&z=494800375
 <li>приложите скриншот консоли браузера в ответ.</li>
-<p>скриншот - stackoverflow.jpg
+<p>скриншот - https://github.com/vitsinv/netology_homework/blob/exp/3_6_net1/stackoverflow.JPG
 </ul>
 <ol start="3">
 <li>Какой IP адрес у вас в интернете?</li>
