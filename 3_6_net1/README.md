@@ -17,14 +17,14 @@ HOST: stackoverflow.com
 <ul>
 <li>В ответе укажите полученный HTTP код, что он означает?</li>
 <p>
-```$ telnet stackoverflow.com 80
+$ telnet stackoverflow.com 80
 Trying 151.101.129.69...
 Connected to stackoverflow.com.
 Escape character is '^]'.
 GET /questions HTTP/1.0
 HOST: stackoverflow.com
 
-HTTP/1.1 301 Moved Permanently```
+HTTP/1.1 301 Moved Permanently
 <p> Ресурс перемещен навсегда
 </ul>
 </ul>
