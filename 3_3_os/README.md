@@ -32,7 +32,7 @@ close(3)                                = 0
 <p>cat /dev/null > имя_файла</p>
 </li>
 <li>Занимают ли зомби-процессы какие-то ресурсы в ОС (CPU, RAM, IO)?
-<p>Процесс висит в RAM. Избавиться от процееса можно прибив родительский</p>
+<p>Процесс занимает место в таблице PID. Наличие единичных зомби-процессов угрозы системе не несет</p>
 </li>
 <li>В iovisor BCC есть утилита <code>opensnoop</code>:
 <div class="highlight highlight-source-shell position-relative" data-snippet-clipboard-copy-content="root@vagrant:~# dpkg -L bpfcc-tools | grep sbin/opensnoop
