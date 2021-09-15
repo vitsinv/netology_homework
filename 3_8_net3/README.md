@@ -50,12 +50,13 @@ show bgp x.x.x.x/32
 
 <li>
 <p>Создайте dummy0 интерфейс в Ubuntu. Добавьте несколько статических маршрутов. Проверьте таблицу маршрутизации.</p>
-<p>
+<p><code>
 vagrant@vagrant:~$ lsmod | grep dummy
 dummy                  16384  0
 vagrant@vagrant:~$ sudo ip link add dummy0 type dummy
 vagrant@vagrant:~$ ifconfig -a | grep dummy
 dummy0: flags=130<BROADCAST,NOARP>  mtu 1500
+</code></p>
 <p>
 vagrant@vagrant:~$ sudo route add -net 192.168.62.0 netmask 255.255.255.0 dev eth0
 vagrant@vagrant:~$ sudo route add -host 8.8.8.8/32 dev eth0
