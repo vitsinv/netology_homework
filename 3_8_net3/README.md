@@ -51,26 +51,25 @@ show bgp x.x.x.x/32
 <li>
 <p>Создайте dummy0 интерфейс в Ubuntu. Добавьте несколько статических маршрутов. Проверьте таблицу маршрутизации.</p>
 <p><code>
-vagrant@vagrant:~$ lsmod | grep dummy
-dummy                  16384  0
-vagrant@vagrant:~$ sudo ip link add dummy0 type dummy
-vagrant@vagrant:~$ ifconfig -a | grep dummy
-dummy0: flags=130<BROADCAST,NOARP>  mtu 1500
+<p>vagrant@vagrant:~$ lsmod | grep dummy
+<p>dummy                  16384  0
+<p>vagrant@vagrant:~$ sudo ip link add dummy0 type dummy
+<p>vagrant@vagrant:~$ ifconfig -a | grep dummy
+<p>dummy0: flags=130<BROADCAST,NOARP>  mtu 1500
 </code></p>
-<p>
-vagrant@vagrant:~$ sudo route add -net 192.168.62.0 netmask 255.255.255.0 dev eth0
-vagrant@vagrant:~$ sudo route add -host 8.8.8.8/32 dev eth0
-vagrant@vagrant:~$ route
-Kernel IP routing table
-Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-default         _gateway        0.0.0.0         UG    0      0        0 vlan10
-default         _gateway        0.0.0.0         UG    100    0        0 eth0
-dns.google      0.0.0.0         255.255.255.255 UH    0      0        0 eth0
-10.0.2.0        0.0.0.0         255.255.255.0   U     0      0        0 eth0
-_gateway        0.0.0.0         255.255.255.255 UH    100    0        0 eth0
-192.168.0.0     0.0.0.0         255.255.255.0   U     0      0        0 vlan10
-192.168.0.0     _gateway        255.255.255.0   UG    0      0        0 vlan10
-192.168.62.0    0.0.0.0         255.255.255.0   U     0      0        0 eth0
+<p>vagrant@vagrant:~$ sudo route add -net 192.168.62.0 netmask 255.255.255.0 dev eth0
+<p>vagrant@vagrant:~$ sudo route add -host 8.8.8.8/32 dev eth0
+<p>vagrant@vagrant:~$ route
+<p>Kernel IP routing table
+<p>Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+<p>default         _gateway        0.0.0.0         UG    0      0        0 vlan10
+<p>default         _gateway        0.0.0.0         UG    100    0        0 eth0
+<p>dns.google      0.0.0.0         255.255.255.255 UH    0      0        0 eth0
+<p>10.0.2.0        0.0.0.0         255.255.255.0   U     0      0        0 eth0
+<p>_gateway        0.0.0.0         255.255.255.255 UH    100    0        0 eth0
+<p>192.168.0.0     0.0.0.0         255.255.255.0   U     0      0        0 vlan10
+<p>192.168.0.0     _gateway        255.255.255.0   UG    0      0        0 vlan10
+<p>192.168.62.0    0.0.0.0         255.255.255.0   U     0      0        0 eth0
 </li>
 <li>
 <p>Проверьте открытые TCP порты в Ubuntu, какие протоколы и приложения используют эти порты? Приведите несколько примеров.</p>
