@@ -11,44 +11,43 @@ show ip route x.x.x.x/32
 show bgp x.x.x.x/32
 </code></pre></div>
 <ol start="2">
-<p>```
-route-views.isc.routeviews.org> show ip bgp 62.148.0.0
-BGP routing table entry for 62.148.0.0/24
-Paths: (7 available, best #7, table default)
-  Not advertised to any peer
-  6762 3216 39376
-    198.32.176.70 from 198.32.176.70 (195.22.206.253)
-      Origin IGP, metric 100, valid, external
-      Community: 6762:1 6762:92 6762:14600
-      Last update: Thu Sep  9 13:03:28 2021
-  30286 3356 3216 39376
-    198.32.176.142 from 198.32.176.142 (10.2.1.2)
-      Origin IGP, valid, external
-      Community: 3216:2001 3216:4477 3356:2 3356:22 3356:100 3356:123 3356:503 3356:903 3356:2067
-      Last update: Thu Sep  9 14:02:25 2021
-  199524 1299 3216 39376
-    198.32.176.226 from 198.32.176.226 (10.255.65.68)
-      Origin IGP, valid, external
-      Last update: Sat Aug 21 16:01:42 2021
-  19151 174 3216 39376
-    198.32.176.164 from 198.32.176.164 (66.186.193.17)
-      Origin IGP, metric 0, valid, external
-      Last update: Thu Sep  9 14:03:04 2021
-  7575 6762 3216 39376
-    198.32.176.70 from 198.32.176.177 (202.158.215.120)
-      Origin IGP, valid, external
-      Community: 7575:1002 7575:2520 7575:6002
-      Last update: Thu Sep  9 13:03:28 2021
-  6939 3216 39376
-    198.32.176.20 from 198.32.176.20 (216.218.252.165)
-      Origin IGP, valid, external
-      Last update: Wed Aug 25 22:59:17 2021
-  36351 3216 39376
-    198.32.176.207 from 198.32.176.207 (173.192.18.26)
-      Origin IGP, valid, external, best (Older Path)
-      Community: 36351:202 46704:200 65501:6
-      Last update: Mon Aug 30 07:44:16 2021
-```
+<p>route-views.isc.routeviews.org> show ip bgp 62.148.0.0
+<p>BGP routing table entry for 62.148.0.0/24
+<p>Paths: (7 available, best #7, table default)
+<p>  Not advertised to any peer
+<p>  6762 3216 39376
+<p>    198.32.176.70 from 198.32.176.70 (195.22.206.253)
+<p>      Origin IGP, metric 100, valid, external
+<p>      Community: 6762:1 6762:92 6762:14600
+<p>      Last update: Thu Sep  9 13:03:28 2021
+<p>  30286 3356 3216 39376
+<p>    198.32.176.142 from 198.32.176.142 (10.2.1.2)
+<p>      Origin IGP, valid, external
+<p>      Community: 3216:2001 3216:4477 3356:2 3356:22 3356:100 3356:123 3356:503 3356:903 3356:2067
+<p>      Last update: Thu Sep  9 14:02:25 2021
+<p>  199524 1299 3216 39376
+<p>    198.32.176.226 from 198.32.176.226 (10.255.65.68)
+<p>      Origin IGP, valid, external
+<p>      Last update: Sat Aug 21 16:01:42 2021
+<p>  19151 174 3216 39376
+<p>    198.32.176.164 from 198.32.176.164 (66.186.193.17)
+<p>      Origin IGP, metric 0, valid, external
+<p>      Last update: Thu Sep  9 14:03:04 2021
+<p>  7575 6762 3216 39376
+<p>    198.32.176.70 from 198.32.176.177 (202.158.215.120)
+<p>      Origin IGP, valid, external
+<p>      Community: 7575:1002 7575:2520 7575:6002
+<p>      Last update: Thu Sep  9 13:03:28 2021
+<p>  6939 3216 39376
+<p>    198.32.176.20 from 198.32.176.20 (216.218.252.165)
+<p>      Origin IGP, valid, external
+<p>      Last update: Wed Aug 25 22:59:17 2021
+<p>  36351 3216 39376
+<p>    198.32.176.207 from 198.32.176.207 (173.192.18.26)
+<p>      Origin IGP, valid, external, best (Older Path)
+<p>      Community: 36351:202 46704:200 65501:6
+<p>      Last update: Mon Aug 30 07:44:16 2021
+
 <li>
 <p>Создайте dummy0 интерфейс в Ubuntu. Добавьте несколько статических маршрутов. Проверьте таблицу маршрутизации.</p>
 <p>
