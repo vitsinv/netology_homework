@@ -11,7 +11,7 @@ show ip route x.x.x.x/32
 show bgp x.x.x.x/32
 </code></pre></div>
 <ol start="2">
-<p>
+<p>```
 route-views.isc.routeviews.org> show ip bgp 62.148.0.0
 BGP routing table entry for 62.148.0.0/24
 Paths: (7 available, best #7, table default)
@@ -48,6 +48,7 @@ Paths: (7 available, best #7, table default)
       Origin IGP, valid, external, best (Older Path)
       Community: 36351:202 46704:200 65501:6
       Last update: Mon Aug 30 07:44:16 2021
+```
 <li>
 <p>Создайте dummy0 интерфейс в Ubuntu. Добавьте несколько статических маршрутов. Проверьте таблицу маршрутизации.</p>
 <p>
