@@ -74,25 +74,25 @@ show bgp x.x.x.x/32
 <li>
 <p>Проверьте открытые TCP порты в Ubuntu, какие протоколы и приложения используют эти порты? Приведите несколько примеров.</p>
 <p> ss или netstat не так важно
-vagrant@vagrant:~$ sudo netstat -tlpn
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      550/systemd-resolve
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      665/sshd: /usr/sbin
-tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      1/init
-tcp6       0      0 :::22                   :::*                    LISTEN      665/sshd: /usr/sbin
-tcp6       0      0 :::111                  :::*                    LISTEN      1/init
+<p>vagrant@vagrant:~$ sudo netstat -tlpn
+<p>Active Internet connections (only servers)
+<p>Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+<p>tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      550/systemd-resolve
+<p>tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      665/sshd: /usr/sbin
+<p>tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      1/init
+<p>tcp6       0      0 :::22                   :::*                    LISTEN      665/sshd: /usr/sbin
+<p>tcp6       0      0 :::111                  :::*                    LISTEN      1/init
 </li>
 <li>
 <p>Проверьте используемые UDP сокеты в Ubuntu, какие протоколы и приложения используют эти порты?</p>
 <p> для разнообразия lsof
-vagrant@vagrant:~$ sudo lsof -nP -i | grep UDP
-systemd      1            root   36u  IPv4  14804      0t0  UDP *:111
-systemd      1            root   38u  IPv6  14810      0t0  UDP *:111
-systemd-n  382 systemd-network   19u  IPv4  17914      0t0  UDP 10.0.2.15:68
-rpcbind    549            _rpc    5u  IPv4  14804      0t0  UDP *:111
-rpcbind    549            _rpc    7u  IPv6  14810      0t0  UDP *:111
-systemd-r  550 systemd-resolve   12u  IPv4  22738      0t0  UDP 127.0.0.53:53
+<p>vagrant@vagrant:~$ sudo lsof -nP -i | grep UDP
+<p>systemd      1            root   36u  IPv4  14804      0t0  UDP *:111
+<p>systemd      1            root   38u  IPv6  14810      0t0  UDP *:111
+<p>systemd-n  382 systemd-network   19u  IPv4  17914      0t0  UDP 10.0.2.15:68
+<p>rpcbind    549            _rpc    5u  IPv4  14804      0t0  UDP *:111
+<p>rpcbind    549            _rpc    7u  IPv6  14810      0t0  UDP *:111
+<p>systemd-r  550 systemd-resolve   12u  IPv4  22738      0t0  UDP 127.0.0.53:53
 </li>
 <li>
 <p>Используя diagrams.net, создайте L3 диаграмму вашей домашней сети или любой другой сети, с которой вы работали.</p>
