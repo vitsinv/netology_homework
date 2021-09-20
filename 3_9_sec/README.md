@@ -1,13 +1,13 @@
 <ol>
 <li>
 <p>Установите Bitwarden плагин для браузера. Зарегестрируйтесь и сохраните несколько паролей.</p>
-<p> Место для скриншота
-<p> Место для скриншота
+<p> https://github.com/vitsinv/netology_homework/blob/exp/3_9_sec/btw_plugin.JPG
+<p> https://github.com/vitsinv/netology_homework/blob/exp/3_9_sec/btw_vault.JPG
 </li>
 <li>
 <p>Установите Google authenticator на мобильный телефон. Настройте вход в Bitwarden акаунт через Google authenticator OTP.</p>
+<p>https://github.com/vitsinv/netology_homework/blob/exp/3_9_sec/G_auth.JPG
 </li>
-<p> Место для скриншота
 <li>
 <p>Установите apache2, сгенерируйте самоподписанный сертификат, настройте тестовый сайт для работы по HTTPS.</p>
 <p>/etc/apache2/ssl$ sudo openssl req -new -x509 -days 1461 -nodes -out test_cert.pem -keyout test_c
@@ -17,7 +17,7 @@ ert.key -subj "/C=RU/ST=MSK/L=MSK/OU=Home/CN=netology/CN=test"
 <p>....................+++++
 <p>writing new private key to 'test_cert.key'
 <p>-----
-<p> Место для скриншота
+<p> https://github.com/vitsinv/netology_homework/blob/exp/3_9_sec/nettest.JPG
 </li>
 <li>
 <p>Проверьте на TLS уязвимости произвольный сайт в интернете.</p>
@@ -196,7 +196,7 @@ ert.key -subj "/C=RU/ST=MSK/L=MSK/OU=Home/CN=netology/CN=test"
 <p>0 packets dropped by kernel
 </p>
 <p> Открываем в Wireshark
-<p> Место для скриншота
+<p> https://github.com/vitsinv/netology_homework/blob/exp/3_9_sec/ws.png
 </li>
 </ol>
 <hr>
