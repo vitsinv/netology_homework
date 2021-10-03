@@ -31,7 +31,7 @@
 <p>while ((1==1)</p>
 <p>do</p>
 <p>curl https://localhost:4757</p>
-<p>if (($? != 0))</p>
+<p> if (($? != 0))</p>
 <p>then</p>
 <p>date >> curl.log</p>
 <p>fi</p>
