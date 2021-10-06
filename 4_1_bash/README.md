@@ -7,17 +7,30 @@
 <ol>
 <li>
 <p>Есть скрипт:</p>
-<p>a=1
-<p>b=2
-<p>c=a+b
-<p>d=$a+$b
-<p>e=$(($a+$b))
+<div class="highlight highlight-source-shell position-relative overflow-auto" data-snippet-clipboard-copy-content="a=1
+b=2
+c=a+b
+d=$a+$b
+e=$(($a+$b))
+"><pre>a=1
+b=2
+c=a+b
+d=$a+$b
+e=$(($a+$b))
 <ul>
 <li>Какие значения переменным c,d,e будут присвоены?</li>
 <li>Почему?</li>
-<p>echo c$
-<p>a+b
-<p>Потому что, a+b просто текстовая конструкция. а переменные вызываются через $
+<code>```
+echo c$
+a+b
+```
+</code>
+
+
+
+Потому что, a+b просто текстовая конструкция. а переменные вызываются через $
+
+
 <p>echo d$
 <p>1+2
 <p>Потому что bash подставил значения переменных, но не увидел математического действия а всего лишь строку
