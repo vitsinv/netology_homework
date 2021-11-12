@@ -49,8 +49,8 @@ Hey, Netology
 
 ```
 
-* Ссылка на репозиторий:
-https://hub.docker.com/repository/docker/vitsin
+* Ссылка на образ:
+https://hub.docker.com/layers/176937793/vitsin/netology-homeworks/v0.0.1/images/sha256-a91ae9cb856a54312c538a09bb075097dcd48f5f80a3675711cabbdaaee1b1be?context=repo
 
 
 <h2 dir="auto">Задача 2</h2>
