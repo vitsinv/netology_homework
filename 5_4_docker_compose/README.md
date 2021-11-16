@@ -19,19 +19,19 @@ vagrant@ubuntu-20:~/yandex-cloud/terraform$ yc compute image list
 <p dir="auto">Создать вашу первую виртуальную машину в Яндекс.Облаке.</p>
 
 <p align="center" dir="auto"> 
-  <a target="_blank" rel="noopener noreferrer" href="node01.jpg"><img width="550" height="650" src="node01.jpg" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/vitsinv/netology_homework/blob/exp/5_4_docker_compose/node01.JPG"><img width="550" height="650" src="https://github.com/vitsinv/netology_homework/blob/exp/5_4_docker_compose/node01.JPG" style="max-width: 100%;"></a>
 </p>
 <h2 dir="auto">Задача 3</h2>
 <p dir="auto">Создать ваш первый готовый к боевой эксплуатации компонент мониторинга, состоящий из стека микросервисов.</p>
 
 <p align="center" dir="auto">
-  <a target="_blank" rel="noopener noreferrer" href="grafana.jpg"><img width="1200" height="550" src="grafana.jpg" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/vitsinv/netology_homework/blob/exp/5_4_docker_compose/grafana.JPG"><img width="1200" height="550" src="https://github.com/vitsinv/netology_homework/blob/exp/5_4_docker_compose/grafana.JPG" style="max-width: 100%;"></a>
 </p>
 <h2 dir="auto">Задача 4 (*)</h2>
 <p dir="auto">Создать вторую ВМ и подключить её к мониторингу развёрнутому на первом сервере.</p>
 
 <p align="center" dir="auto">
-  <a target="_blank" rel="noopener noreferrer" href="grafana-node02.jpg"><img width="1200" height="500" src="grafana-node02.jpg" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/vitsinv/netology_homework/blob/exp/5_4_docker_compose/grafana-node02.JPG"><img width="1200" height="500" src="https://github.com/vitsinv/netology_homework/blob/exp/5_4_docker_compose/grafana-node02.JPG" style="max-width: 100%;"></a>
 
 <p align="center" dir="auto">
-  <a target="_blank" rel="noopener noreferrer" href="prom-targets.jpg"><img width="1200" height="500" src="prom-targets.jpg" style="max-width: 100%;"></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/vitsinv/netology_homework/blob/exp/5_4_docker_compose/prom-targets.JPG"><img width="1200" height="500" src="https://github.com/vitsinv/netology_homework/blob/exp/5_4_docker_compose/prom-targets.JPG" style="max-width: 100%;"></a>
