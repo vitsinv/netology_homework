@@ -248,7 +248,7 @@ root@5e671e924579:/# pg_dump -U postgres -d test_database > /var/lib/postgresql/
 ```
 <p dir="auto">Как бы вы доработали бэкап-файл, чтобы добавить уникальность значения столбца <code>title</code> для таблиц <code>test_database</code>?</p>
 
-* Можно путем добавления какого-нибудь индекса. 
+* У PostgreSQL есть понятие уникальное ограничение. Оно же Unique. После его добавления в столбце не может быть одинкаовых значений.
 ```
-CREATE INDEX ON orders ((lower(title)));
+ALTER TABLE orders ADD CONSTRAINT uniq_title UNIQUE (title);
 ```
