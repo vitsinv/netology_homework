@@ -229,5 +229,5 @@ you run "terraform apply" now.
   * CloudFormation
 <li>Ссылку на репозиторий с исходной конфигурацией терраформа.</li>
 
-  * 
+  * https://github.com/vitsinv/netology_homework/tree/exp/7_2_TF_Sntx/tf
 </ol>
